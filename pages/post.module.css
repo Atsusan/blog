@@ -123,7 +123,7 @@
   padding: 20px;
   border-radius: 12px;
 }
-
+/* 
 @media (prefers-color-scheme: dark) {
   .code,
   .table,
@@ -135,4 +135,4 @@
     cursor: pointer;
     border-radius: 2px;
   }
-}
+} */

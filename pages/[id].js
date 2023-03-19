@@ -130,10 +130,13 @@ const renderBlock = (block) => {
     case "quote":
       return <blockquote key={id}>{value.rich_text[0].plain_text}</blockquote>;
     case "code":
+      // codeブロックの中身がない場合の対処
       return (
         <pre className={styles.pre}>
           <code className={styles.code_block} key={id}>
-            {value.rich_text[0].plain_text}
+            {value.rich_text && value.rich_text.length > 0
+              ? value.rich_text[0].plain_text
+              : " "}
           </code>
         </pre>
       );
